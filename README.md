@@ -70,6 +70,7 @@ There are many third-party online servers and platforms available for showcasing
 1-	Periodic function every 1 second:
 ![alt text](https://github.com/MohamedOsamaAhmed/Fishbowl_ESP_TivaC_IOT/blob/main/1st%20FlowChart.png?raw=true)
 
+
 2- Event Triggered Function when UART receive any new data
 ![alt text](https://github.com/MohamedOsamaAhmed/Fishbowl_ESP_TivaC_IOT/blob/main/2nd%20flowchart.png?raw=true)
 
@@ -77,6 +78,7 @@ There are many third-party online servers and platforms available for showcasing
 Firebase provides a quick way to keep sensory data collected at the device level, and it works great with the Android APIs, which is supported by AndroidThings. A lot of mobile and device programmers that I have come across struggle with server-side programming. Firebase can really help bridge that gap and make it easier.
 We created a Firebase Project to store our data in the format (Fig 1). The (config) part is to get data from website when the user changes it. The (status) is the status of each component and is updated when receiving from Tiva-C the status is changed.
 ![alt text](https://github.com/MohamedOsamaAhmed/Fishbowl_ESP_TivaC_IOT/blob/main/FIG1.png?raw=true)
+
 We used “Firebase Realtime Database Arduino Library for ESP8266” which is open-source library supports many features like:
 -  	Supports Read (get), Store (set), Append (push), Patch (update) and Delete Data.
 -  	Supports Primitive data types: Integer, Float, Double, Boolean, String and JSON0
@@ -100,22 +102,30 @@ The user can configure the UART Baud Rate, WIFI-SSID or WIFI-Password and Ids of
 ## How it works:
 1 - On page load, it displays the motor, coil and temperature sensor; whether they are on or off. It also displays the current temperature of the component.
 ![alt text](https://github.com/MohamedOsamaAhmed/Fishbowl_ESP_TivaC_IOT/blob/main/FIG3.png?raw=true)
+
 2 - The web interface accepts the desired component configuration; these configurations are sent to the NodeMCU which in turn is used to control and talk to the Tiva-C.
+
 ![alt text](https://github.com/MohamedOsamaAhmed/Fishbowl_ESP_TivaC_IOT/blob/main/FIG4.png?raw=true)
 ## Code Walkthrough: 
 Line 1: We first add a “DOMContentLoaded” event to the document, this ensures that all javascript code is run when all HTML elements have been successfully loaded, this helps prevents some errors when some JS code tries to access undefined elements
+
 ![alt text](https://github.com/MohamedOsamaAhmed/Fishbowl_ESP_TivaC_IOT/blob/main/FIG5.png?raw=true)
+
 Line 2 - 17: This snippet adds necessary validation for the required temperature inputs, this ensures that the user will add a minimum required temperature that isn’t less than Zero, maximum required temperature to be not greater than 100.The above code snippet captures the users input for the desired required temperature and uploads.
+
 ![alt text](https://github.com/MohamedOsamaAhmed/Fishbowl_ESP_TivaC_IOT/blob/main/FIG6.png?raw=true)
+
 it to Firebase’s real time database. The data is sent Then read by the NodeMCU.
+
 ![alt text](https://github.com/MohamedOsamaAhmed/Fishbowl_ESP_TivaC_IOT/blob/main/FIG7.png?raw=true)
+
 This code snippets queries the Firebase database to get recent component configuration (motor, coil and temperature sensor state). Then it displays them for the user.
 
 ## Results
 You can watch this video : https://www.youtube.com/watch?v=nvD4yI06u5g&ab_channel=MohamedOsama
 
 ## BreadBoard connections
-You can watch this video : https://github.com/MohamedOsamaAhmed/Fishbowl_ESP_TivaC_IOT/blob/main/connections.mp4
+You can watch this video : https://youtu.be/-OVu4ov5pZs
 
 ## Conclusion
 ARM based Processor is more configurable than other processors beside TM4C has many peripherals than PIC and AVR which enabled us to think freely. Also, IOT is a great world for many ideas so we can control any thing from anywhere only we need internet and ESP WIFI Module then we are ready to write some codes in C, web and Arduino language to make our application ready to use. 
