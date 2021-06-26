@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+    <title>Tiva C</title>
+  </head>
+  <body>
+    <div class="component-style" style="margin: 10px">
+      <h1>Component Style</h1>
+      <div id="moter-div" class="apply-padding">
+        Motor
+        <label class="switch">
+          <input type="checkbox" id="motor" disabled />
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div id="temp-sensor-div" class="apply-padding">
+        Temperature Sensor
+        <label class="switch">
+          <input type="checkbox" id="temp-sensor" disabled />
+          <span class="slider round"></span>
+        </label>
+      </div>
+
+      <div id="coil-div" class="apply-padding">
+        Coil
+        <label class="switch">
+          <input type="checkbox" id="coil" disabled />
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+    <hr />
+
+    <div class="current-state" style="margin: 20px">
+      <h1>Current State</h1>
+      <div id="current-state">
+        <label for="temperature-value" class="apply-padding">
+          Temperature:
+        </label>
+        <input type="text" id="temperature-value" value="" readonly /> &deg;C
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="configuration" style="margin: 20px">
+      <h1>Configuration</h1>
+      <div id="required-temperature">
+        Required Temperature: (20-50)
+        <hr />
+        <label for="min-temperature-value" class="apply-padding"
+          >Minimum Temperature</label
+        >
+        <input type="text" id="min-temperature-value" /> &deg;C
+        <hr />
+        <label for="max-temperature-value" class="apply-padding"
+          >Maximum Temperature</label
+        >
+        <input type="text" id="max-temperature-value" /> &deg;C
+      </div>
+
+
+      <button id="save-button" type="button" class="btn btn-success">
+        Save
+      </button>
+    </div>
+    <footer>
+      <script src="script.js"></script>
+    </footer>
+  </body>
+</html>
