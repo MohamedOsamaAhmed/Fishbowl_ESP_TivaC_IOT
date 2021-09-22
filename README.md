@@ -25,7 +25,7 @@
 12.	References
 
 ## Abstract
-This is an IOT device that control the temperature and DC motor based on the user settings using an ARM Cortex M4 based processor which is in TM4C123GH6PM Microcontroller Tiva C series and ESP8266 WIFI Module to connect to the Internet using C programming language for TM4C Micro, Arduino for ESP Module with HTML, JavaScript, CSS and firebase for Web.
+This is an IOT device that controls the temperature and DC motor based on the user settings using an ARM Cortex M4 based processor which is in TM4C123GH6PM Microcontroller Tiva C series and ESP8266 WIFI Module to connect to the Internet using C programming language for TM4C Micro, Arduino for ESP Module with HTML, JavaScript, CSS and firebase for Web.
 
 ## Introduction
 In this project, we implement an IoT device using Google firebase and Website in web side and TM4C with ESP Microcontroller.
